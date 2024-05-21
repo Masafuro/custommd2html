@@ -29,9 +29,9 @@
 
 以下はカスタム記法の例です。
 - section { .section }
-    - div { .container}
+    - div { .container #id }
         - h1 { .title } タイトル
-        - p { .paragraph } こんにちは
+        - p { .paragraph #id } こんにちは
         - input { _type } 入力
 ```
 
