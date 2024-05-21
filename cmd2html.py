@@ -54,11 +54,13 @@ def process_deepest_html(content):
                 tag, rest = line.split()[1], line.split('{', 1)[1]
                 attrs, text = rest.split('}', 1)
                 classes = ' '.join(a[1:] for a in attrs.split() if a.startswith('.'))
+                types = ' '.join(a[1:] for a in attrs.split() if a.startswith('_'))
                 ids = ' '.join(a[1:] for a in attrs.split() if a.startswith('#'))
                 class_attr = f' class="{classes}"' if classes else ''
+                type_attr = f' type="{types}"' if types else ''
                 id_attr = f' id="{ids}"' if ids else ''
                 open_tag = tag
-                html_line = f'<{tag}{class_attr}{id_attr}>{text.strip()}'
+                html_line = f'<{tag}{type_attr}{class_attr}{id_attr}>{text.strip()}'
                 processed_lines.append(html_line)
                 end_tag_inserted = False
             else:
