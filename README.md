@@ -10,7 +10,7 @@
 
 - section : {.class #id}
   - div : {.class1 .class2 #id}
-    - p : {.class # id} 内容
+    - p : {.class #id} 内容
 
 ```
 
