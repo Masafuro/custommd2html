@@ -28,6 +28,7 @@
     - div { .container}
         - h1 { .title } タイトル
         - p { .paragraph } こんにちは
+        - input { _type } 入力
 ```
 
 
@@ -52,6 +53,7 @@
 - section {.class #id}
   - div {.class1 .class2 #id}
     - p {.class #id} 内容
+　　- input { _type } 
 
 ```
 
