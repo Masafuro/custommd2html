@@ -1,9 +1,41 @@
-# test1.md
-
-- section {.hero .is-primary #main-section}
-  - div {.container}
-    - h1 {.title .miso #himo} # Main Title
-    - p {.content} This is a paragraph inside a container.
-  - section {.section}
-    - h2 {.subtitle} Subtitle
-    - p {.content} Another paragraph in a nested section.
+- section { .section }
+    - div { .container }
+        - h1 { .title } シリアルモニター
+        - div { .box }
+            - div { .field }
+                - label { .label } COMポート
+                - div { .control }
+                    - div { .select }
+                        - select { #comport-select }
+                            - option { _value="COM1" } COM1
+                            - option { _value="COM2" } COM2
+                            - option { _value="COM3" } COM3
+                            - option { _value="COM4" } COM4
+                            - option { _value="COM5" } COM5
+            - div { .field }
+                - label { .label } ボーレート
+                - div { .control }
+                    - div { .select }
+                        - select { #baudrate-select }
+                            - option { _value="9600" } 9600
+                            - option { _value="19200" } 19200
+                            - option { _value="38400" } 38400
+                            - option { _value="57600" } 57600
+                            - option { _value="115200" } 115200
+            - div { .field }
+                - label { .label } データ表示モード
+                - div { .control }
+                    - div { .tabs }
+                        - ul { }
+                            - li { .is-active #tab-text }
+                                - a { } テキスト
+                            - li { #tab-graph }
+                                - a { } グラフ
+            - div { .field }
+                - div { #data-display }
+                    - textarea { .textarea #text-display } ログデータ
+                    - div { .content #graph-display .is-hidden } グラフエリア（ここにグラフが表示されます）
+            - div { .field }
+                - div { .control }
+                    - button { .button .is-primary #start-button } 開始
+                    - button { .button .is-danger #stop-button } 停止

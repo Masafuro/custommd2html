@@ -9,23 +9,106 @@
   <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet"/>
  </head>
  <body>
-  <section class="hero is-primary" id="main-section">
+  <section class="section">
    <div class="container">
-    <h1 class="title miso" id="himo">
-     # Main Title
+    <h1 class="title">
+     シリアルモニター
     </h1>
-    <p class="content">
-     This is a paragraph inside a container.
-    </p>
+    <div class="box">
+     <div class="field">
+      <label class="label">
+       COMポート
+      </label>
+      <div class="control">
+       <div class="select">
+        <select id="comport-select">
+         <option com1""="" type="value=">
+          COM1
+         </option>
+         <option com2""="" type="value=">
+          COM2
+         </option>
+         <option com3""="" type="value=">
+          COM3
+         </option>
+         <option com4""="" type="value=">
+          COM4
+         </option>
+         <option com5""="" type="value=">
+          COM5
+         </option>
+        </select>
+       </div>
+      </div>
+     </div>
+     <div class="field">
+      <label class="label">
+       ボーレート
+      </label>
+      <div class="control">
+       <div class="select">
+        <select id="baudrate-select">
+         <option 9600""="" type="value=">
+          9600
+         </option>
+         <option 19200""="" type="value=">
+          19200
+         </option>
+         <option 38400""="" type="value=">
+          38400
+         </option>
+         <option 57600""="" type="value=">
+          57600
+         </option>
+         <option 115200""="" type="value=">
+          115200
+         </option>
+        </select>
+       </div>
+      </div>
+     </div>
+     <div class="field">
+      <label class="label">
+       データ表示モード
+      </label>
+      <div class="control">
+       <div class="tabs">
+        <ul>
+         <li class="is-active" id="tab-text">
+          <a>
+           テキスト
+          </a>
+         </li>
+         <li id="tab-graph">
+          <a>
+           グラフ
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="field">
+      <div id="data-display">
+       <textarea class="textarea" id="text-display">ログデータ
+</textarea>
+       <div class="content is-hidden" id="graph-display">
+        グラフエリア（ここにグラフが表示されます）
+       </div>
+      </div>
+     </div>
+     <div class="field">
+      <div class="control">
+       <button class="button is-primary" id="start-button">
+        開始
+       </button>
+       <button class="button is-danger" id="stop-button">
+        停止
+       </button>
+      </div>
+     </div>
+    </div>
    </div>
-   <section class="section">
-    <h2 class="subtitle">
-     Subtitle
-    </h2>
-    <p class="content">
-     Another paragraph in a nested section.
-    </p>
-   </section>
   </section>
  </body>
 </html>
