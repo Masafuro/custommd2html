@@ -44,3 +44,17 @@
 
 ```
 
+## template.html
+
+全体のテンプレートは別で指定します。カスタム記法の.mdファイルはHTMLに変換されて<body></body>の間に挿入されます。
+
+```python
+
+if __name__ == '__main__':
+    import_file_path = 'gpt4o2.md'
+    template_path = 'template.html'
+    export_file_name = 'export.html'
+
+    main(import_file_path, template_path, export_file_name)
+
+```
