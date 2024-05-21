@@ -1,7 +1,7 @@
 # custommd2html
 
 - custommd2htmlは、ChatGPTなどのAIでHTMLを考えてもらうために開発しました。
-- 現在ChatGPTなどのAIでは、通常のHTMLでは、文字数が多くなりすぎ、安定したHTMLを出力しにくいです。
+- 現在ChatGPTなどのAIでは、HTML生成時に文字数が多くなりすぎ、安定したHTMLを出力しにくいです。
 - そこでより簡易化したマークダウン記法を用いてChatGPTに考えてもらい、それをHTMLに変換して出力します。
 - CSSやJavascriptとシームレスに結合させるため、クラスとIDの記法があります。
 - また階層構造を箇条書きリストによって表現しています。
